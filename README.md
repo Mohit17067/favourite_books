@@ -9,6 +9,21 @@ fields - `title, amazon_url, author, genre`. Authentication is handled with JSON
   * To run the application in the container - `"docker-compose up api"`. <br>
   **Note: Keep this instance of the terminal running. Open a new terminal.**
 
+## Project Structure
+
+ * Database of tables
+   * [book.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/models/book.py)
+   * [client.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/models/client.py)
+ 
+ * Authentication of API_KEY & JWT.
+   * [middleware.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/apis/v1/middleware.py)
+   * [utils.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/apis/v1/utils.py)
+ 
+ * Handling urls
+   * [books.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/apis/v1/books.py)
+   * [users.py](https://github.com/Mohit17067/favourite_books/blob/master/favourite_books/apis/v1/users.py)
+ 
+ 
 ## Authentication of a client
   * **We need to create a new client in the shell to generate the jwt token**.<br> 
     Run - `"docker-compose run api flask shell"`
