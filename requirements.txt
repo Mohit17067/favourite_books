@@ -1,4 +1,4 @@
-Flask==0.11.0
+Flask==1.0
 flask-sqlalchemy==2.1
 py-kim==1.2.0
 sqlalchemy-utils==0.32.13
