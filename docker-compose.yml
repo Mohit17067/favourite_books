@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  api:
+    build: .
+    container_name: favourite_books
+    image: favourite_books
+    volumes:
+      - ../favourite-books:/opt/code
+    ports:
+      - "8080:8080"
