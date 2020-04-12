@@ -28,13 +28,17 @@ def decode_client_token(client, token):
             audience=str(client.id),
             leeway=0
         )
+    except jwt.ExpiredSignatureError:
+        msg = 'Signature has expired.'
+        raise exceptions.AuthenticationFailed(msg)
+        return False
     except jwt.InvalidTokenError:
         return False
 
 
 def encode_client_token(client, user_id=None):
     iat = datetime.utcnow()
-    exp = iat + timedelta(days=30)
+    exp = iat + timedelta(minutes=30)
     nbf = iat
     payload = {
         'exp': exp,
