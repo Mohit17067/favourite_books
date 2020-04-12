@@ -5,6 +5,7 @@ sqlalchemy-utils==0.32.13
 arrow==0.10.0
 Flask-Alembic==2.0.1
 ipdb
+psycopg2==2.7.1
 pytest==3.1.2
 pytest-cov==2.5.1
 PyJWT==1.5.2
